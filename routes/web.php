@@ -20,3 +20,6 @@ Route::get('/', function () {
 
 Route::get('/series', [SeriesController::class, 'index']);
 Route::get('/series/criar', [SeriesController::class, 'create']); 
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
